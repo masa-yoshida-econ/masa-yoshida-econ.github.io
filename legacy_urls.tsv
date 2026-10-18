@@ -1,16 +1,18 @@
 # Old Wix file URLs -> current file in this site.
 # After the DNS switch, https://www.m-yoshida.com/_files/ugd/<name> serves the file on the right.
 # Wix makes a new <name> every time a PDF is re-uploaded; add each new one here.
+# Lines marked SUBMITTED are inside application documents that were already sent. Never delete them.
+#   2026-10-15 Waseda (empirical) package: CV + Research statement
 # <Wix file name>	<file in this site>
 16b655_0055842a0c464e5db3838a8aa3a804e2.pdf	papers/Yoshida_Qiu_LaborShare.pdf
 16b655_deb984da30744338ac1097f836693957.pdf	papers/Yoshida_TooHotToWork.pdf
 16b655_1a2188270edf4445a74bd3ab662094d4.pdf	papers/Yoshida_TooHotToWork_slides.pdf
 16b655_50c57292512440fea625a0f23e2d6522.pdf	papers/Yoshida_TooHotToWork_summary.pdf
 16b655_9eb7328f3ad546bcb3f5e2759c0213b2.pdf	papers/Yoshida_Rujiwattanapong_Unemployment.pdf
-16b655_be179f8c0349417994d7cdd72da5d238.pdf	papers/Yoshida_DangerousJobs.pdf
+16b655_be179f8c0349417994d7cdd72da5d238.pdf	papers/Yoshida_DangerousJobs.pdf	# SUBMITTED 2026-10-15 Waseda
 16b655_3617cbe4ef6c42bc9308fb500c46cb75.pdf	papers/Yoshida_Impact2025_Robots.pdf
-16b655_930e473e24f844f78a488bf175f84e90.pdf	papers/Yoshida_ImmigrationAutomation.pdf
-16b655_54f9d443fce3412c9012f9d60e8dc349.pdf	papers/Yoshida_Owan_Singularity.pdf
+16b655_930e473e24f844f78a488bf175f84e90.pdf	papers/Yoshida_ImmigrationAutomation.pdf	# SUBMITTED 2026-10-15 Waseda
+16b655_54f9d443fce3412c9012f9d60e8dc349.pdf	papers/Yoshida_Owan_Singularity.pdf	# SUBMITTED 2026-10-15 Waseda
 16b655_142007ce4fa349d5b176eaf106b1b6e6.pdf	papers/Yoshida_DeadlineCredibility.pdf
 16b655_70b73f6bf6264c8691d0e9c63de76e5d.pdf	papers/Yoshida_SoftDeadline.pdf
 16b655_d06eb9dae044476b9519eace140cbd93.pdf	papers/Yoshida_OAG2026_Unemployment.pdf
