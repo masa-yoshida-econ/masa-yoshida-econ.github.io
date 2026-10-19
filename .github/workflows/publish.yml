@@ -1,5 +1,4 @@
 # Render the Quarto site on every push to main and publish to GitHub Pages.
-# (Not yet tested — first run after `git push` to m-yoshida-econ/m-yoshida-econ.github.io.)
 name: Publish site
 
 on:

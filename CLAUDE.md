@@ -10,8 +10,8 @@ Quarto + GitHub Pages に移行し、よりプロフェッショナルに見せ�
 
 ## 確定事項（議論済み・再検討不要）
 - ジェネレータは **Quarto**（Hugo/HugoBlox・Jekyll は不採用。保守性とRワークフローとの整合で決定）
-- ホスティングは **GitHub Pages**。GitHubユーザー名は `m-yoshida-econ`
-- リポジトリ名は `m-yoshida-econ.github.io`
+- ホスティングは **GitHub Pages**。GitHubユーザー名は `masa-yoshida-econ`（2026-10-19 に m-yoshida-econ から変更）
+- リポジトリ名は `masa-yoshida-econ.github.io`
 - 独自ドメイン `m-yoshida.com`（Wix購入）を継続使用。DNSのみGitHub Pagesへ向け替え（ドメイン移管はしない）
 - `gh` と `quarto` は Homebrew でインストール済み、`gh auth login` 完了
 - 素材は本フォルダ `website/` 内にある（CV PDF・写真・論文リスト・プロフィール文など。ファイル名は任意、中身で判断すること）
@@ -37,12 +37,12 @@ Quarto + GitHub Pages に移行し、よりプロフェッショナルに見せ�
 ## 技術構成
 - GitHub Actions で push 時に自動 render → Pages 公開
 - `CNAME` ファイルに `m-yoshida.com`
-- まず `https://m-yoshida-econ.github.io` で表示確認。**DNS切替は最後**（新サイト完成まで旧Wixサイトを落とさない）
+- まず `https://masa-yoshida-econ.github.io` で表示確認。**DNS切替は最後**（新サイト完成まで旧Wixサイトを落とさない）
 - 日常更新は「`.bib` に1エントリ追加 → push」で済む設計にする
 
 ## DNS切替手順（施主がWix管理画面で実施。Claude Codeは値を提示するのみ）
 - Aレコード（@）×4: 185.199.108.153 / 185.199.109.153 / 185.199.110.153 / 185.199.111.153
-- CNAME（www）: m-yoshida-econ.github.io
+- CNAME（www）: masa-yoshida-econ.github.io
 - 既存のWix向けA/CNAMEは削除
 - GitHub側: Settings → Pages → Custom domain = m-yoshida.com、Enforce HTTPS
 - 反映後、Wixのサイトプランは解約（ドメイン契約のみ残す）
