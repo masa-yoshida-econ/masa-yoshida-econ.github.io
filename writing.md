@@ -6,25 +6,25 @@ CV（2026-09-29 版）の "Non-Refereed Publications" と "Books" から作成�
 - 最終行のリンク [ラベル](URL) はボタン表示になる。
 -->
 
-## Books (in Japanese)
+## Books
 
 <p class="works-intro">Long-selling books for general readers on problem solving, written as a student at the University of Tokyo, with translations published in Korea, Taiwan, and China.</p>
 
 - **Methodology for Group Collaboration**, 2014\
   『東大生が書いた 議論する力を鍛えるディスカッションノート』\
-  East Economics Press (東洋経済新報社)\
+  Toyo Keizai (東洋経済新報社)\
   Translations: Chinese (Shandong Friendship Publishing House, 2023)\
   [Publisher page](https://str.toyokeizai.net/books/9784492557525/)
 
 - **Case Studies for Problem Solving** (with Atsushige Kimoto), 2010\
   『東大生が書いた 問題を解く力を鍛えるケース問題ノート』\
-  East Economics Press (東洋経済新報社)\
+  Toyo Keizai (東洋経済新報社)\
   Translations: Taiwanese (Sanren Press, 2016); Chinese (Post Wave Publishing Consulting, 2023)\
   [Publisher page](https://str.toyokeizai.net/books/9784492556733/)
 
 - **Introduction to the Fermi Estimation** (with Shunsuke Wakita), 2009\
   『現役東大生が書いた 地頭を鍛えるフェルミ推定ノート』\
-  East Economics Press (東洋経済新報社)\
+  Toyo Keizai (東洋経済新報社)\
   Translations: Korean (Eiji Press, 2011); Taiwanese (Sanren Press, 2016); Chinese (Post Wave Publishing Consulting, 2022)\
   [Publisher page](https://str.toyokeizai.net/books/9784492556542/)
 
