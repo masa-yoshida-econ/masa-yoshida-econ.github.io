@@ -109,7 +109,8 @@ a.stmt-btn:hover { background: $waseda-red; color: #fff; }
 .stmt-btn.is-dummy { border-style: dashed; border-color: $rule-strong; color: $muted; cursor: not-allowed; }
 .stmt-btn.is-dummy small { font-size: .75em; margin-left: .3rem; }
 
-// ---- Non-Refereed Works / Teaching lists (written in plain markdown) ----
+// ---- Non-Technical Writing / Teaching lists (written in plain markdown) ----
+.works-intro { font-style: italic; color: $muted; margin: -.2rem 0 1rem 0; }
 .works ul, .teach ul { list-style: none; padding-left: 0; }
 .works li, .teach li { margin-bottom: 1.2rem; font-family: $font-family-serif; font-size: 1.02rem; color: $ink; }
 .works li strong, .teach li strong { font-size: 1.12rem; }

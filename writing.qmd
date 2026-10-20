@@ -1,0 +1,7 @@
+---
+title: "Non-Technical Writing"
+---
+
+::: {.works}
+{{< include writing.md >}}
+:::

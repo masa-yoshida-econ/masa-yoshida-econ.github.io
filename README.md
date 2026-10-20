@@ -10,7 +10,7 @@ GitHub Actions が render して GitHub Pages に公開する（ワークフロ�
 - `index.qmd` : Home（`talks.md` を include して Recent Talks を表示）
 - `talks.md` : Recent Talks の正本。1 行 1 件、新しい順に書く
 - `research.qmd` : Research（`papers.bib` を読んで自動描画）
-- `works.qmd`, `works.md` : Non-Refereed Works（非査読記事と本。`works.md` が正本）
+- `writing.qmd`, `writing.md` : Non-Technical Writing（本と一般向け記事。`writing.md` が正本）
 - `teaching.qmd` : Teaching（授業歴は qmd に直接書く）
 - `statements/` : Research / Teaching Statement の PDF 置き場
 - `R/statements.R` : Statement ボタン（PDF があればリンク、なければ coming soon）
@@ -26,7 +26,7 @@ GitHub Actions が render して GitHub Pages に公開する（ワークフロ�
 ## 日常更新
 
 - 発表を追加: `talks.md` の先頭に 1 行足す → push。
-- 非査読記事・本を追加: `works.md` の該当セクション先頭に足す → push。
+- 本・一般向け記事を追加: `writing.md` の該当セクション先頭に足す → push。
 - Statement を公開: 次の名前で `statements/` に PDF を置く → push。
   `Yoshida_ResearchStatement_EN.pdf` / `Yoshida_ResearchStatement_JA.pdf` /
   `Yoshida_TeachingStatement_EN.pdf` / `Yoshida_TeachingStatement_JA.pdf`

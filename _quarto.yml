@@ -7,7 +7,7 @@ project:
   render:
     - "*.qmd"
     - "!talks.md"
-    - "!works.md"
+    - "!writing.md"
   resources:
     - cv.pdf
     - papers/
@@ -25,8 +25,8 @@ website:
         href: index.qmd
       - text: "Research"
         href: research.qmd
-      - text: "Non-Refereed Works"
-        href: works.qmd
+      - text: "Non-Technical Writing"
+        href: writing.qmd
       - text: "Teaching"
         href: teaching.qmd
       - text: "CV"
