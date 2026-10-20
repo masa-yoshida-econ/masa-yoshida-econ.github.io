@@ -59,3 +59,4 @@ Quarto + GitHub Pages に移行し、よりプロフェッショナルに見せ�
 - Research は `papers.bib` → `R/render_bib.R`（base R）→ `research.qmd` で描画。
 - 論文 PDF は `papers/` に移管済み（2026-10-11）。ボタン色は WASEDA RED #8E1729。
 - 2026-10-13: Non-Refereed Works（works.md）と Teaching ページを追加。Statement は statements/ に PDF を置くと自動でボタンが有効になる。
+- 2026-10-20: DNS 切替完了。公開 URL は https://www.m-yoshida.com（GitHub の custom domain は www が主、m-yoshida.com は www へ転送、常時 HTTPS）。Wix はドメイン契約と DNS のみ使用、サイトプランは解約予定。
