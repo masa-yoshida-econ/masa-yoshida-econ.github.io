@@ -53,7 +53,7 @@ Quarto + GitHub Pages に移行し、よりプロフェッショナルに見せ�
 - 迷ったら「シンプルな方」「保守が楽な方」を選ぶ
 
 ## 作業メモ（2026-10-11 追記）
-- プロジェクトの実体はこのフォルダ `~/Dropbox/m-yoshida-econ.github.io/`。
+- プロジェクトの実体はこのフォルダ `~/Dropbox/masa-yoshida-econ.github.io/`（2026-10-20 に旧名 m-yoshida-econ.github.io から改名）。
   素材フォルダ `~/Dropbox/website:/` はフォルダ名のコロンが Quarto（Sass）を壊すので、
   ソースはここに置く。素材（CV PDF・写真・profile.md）は従来どおり `website:` にある。
 - Research は `papers.bib` → `R/render_bib.R`（base R）→ `research.qmd` で描画。
