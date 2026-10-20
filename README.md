@@ -42,9 +42,8 @@ GitHub Actions が render して GitHub Pages に公開する（ワークフロ�
   `legacy_urls.tsv` に 1 行足す。
 - `papers/` のファイル名は書類に載るので、DNS 切替後は変えない。
 
-- 素材フォルダ `~/Dropbox/website:` はフォルダ名のコロンが Quarto の
-  テーマコンパイルを壊すため、プロジェクトは `~/Dropbox/masa-yoshida-econ.github.io`
-  に置いている（GitHub のリポジトリ名と同じ名前）。
+- 素材（CV・写真・プロフィール・指示書）は `~/Dropbox/0_context_ai/website/` にある。
+  旧素材フォルダ `~/Dropbox/website:` はフォルダ名のコロンが Quarto を壊したため廃止。
 - 論文 PDF は `papers/` にある。ファイル名は `Yoshida_短い名前.pdf`（共著は
   `Yoshida_共著者_短い名前.pdf`、スライドは末尾 `_slides`）。
   新しい版は同じファイル名で上書きすれば bib を触らずに済む。
