@@ -124,6 +124,17 @@ a.stmt-btn:hover { background: $waseda-red; color: #fff; }
 .teach li { margin-bottom: .8rem; }
 .teach-sub { color: $muted; font-style: italic; margin-top: -.3rem; }
 
+// ---- phones / small tablets ----
+@media (max-width: 767.98px) {
+  .home-photo img { max-width: 150px; }
+  .home-name { font-size: 1.65rem; margin-top: .4rem; }
+}
+@media (max-width: 575.98px) {
+  .navbar .navbar-brand { font-size: 1.05rem; }
+  .home-fields { grid-template-columns: 1fr; row-gap: 0; }
+  .home-fields dd { margin-bottom: .7rem; }
+}
+
 // ---- footer ----
 .nav-footer { border-top: 1px solid $rule; font-size: .85rem; }
 
