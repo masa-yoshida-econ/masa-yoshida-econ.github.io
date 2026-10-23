@@ -141,9 +141,10 @@ render_entry <- function(e, me = "Masahiro Yoshida") {
   )
   links <- links[links != ""]
   cite_id <- paste0("cite-", e$key)
-  links <- c(links, sprintf('<a href="#%s" class="pub-cite-btn" data-target="%s">Cite</a>', cite_id, cite_id))
-  links_html <- sprintf('<div class="pub-links">%s</div>', paste(links, collapse = ""))
-  cite_html <- sprintf('<div class="pub-cite" id="%s" hidden><pre><code>%s</code></pre><button type="button" class="pub-cite-copy">Copy</button></div>',
+  show_cite <- !identical(tolower(if (is.null(e$cite)) "" else e$cite), "no")
+  if (show_cite) links <- c(links, sprintf('<a href="#%s" class="pub-cite-btn" data-target="%s">Cite</a>', cite_id, cite_id))
+  links_html <- if (length(links)) sprintf('<div class="pub-links">%s</div>', paste(links, collapse = "")) else ""
+  cite_html <- if (!show_cite) "" else sprintf('<div class="pub-cite" id="%s" hidden><pre><code>%s</code></pre><button type="button" class="pub-cite-copy">Copy</button></div>',
                        cite_id, gsub("<", "&lt;", make_bibtex(e), fixed = TRUE))
   talks <- if (!is.null(e$talks)) sprintf('<div class="pub-talks">%s</div>', tex2html(e$talks)) else ""
   abs   <- if (!is.null(e$abstract)) sprintf('<details><summary>Abstract</summary><p>%s</p></details>', tex2html(e$abstract)) else ""
