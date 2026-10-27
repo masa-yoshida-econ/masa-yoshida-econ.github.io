@@ -7,6 +7,7 @@ title: "Research"
 source("R/render_bib.R")
 source("R/statements.R")
 bib <- read_bib("papers.bib")
+taglines <- read_taglines("taglines.md")
 ```
 
 ```{r}
@@ -20,7 +21,7 @@ statement_buttons("Yoshida_ResearchStatement", "Research Statement")
 ```{r}
 #| results: asis
 #| echo: false
-render_section(bib, "wp_revision")
+render_section(bib, "wp_revision", taglines)
 ```
 
 ## Working Papers
@@ -28,7 +29,7 @@ render_section(bib, "wp_revision")
 ```{r}
 #| results: asis
 #| echo: false
-render_section(bib, "wp")
+render_section(bib, "wp", taglines)
 ```
 
 ## Journal Publications
@@ -36,7 +37,7 @@ render_section(bib, "wp")
 ```{r}
 #| results: asis
 #| echo: false
-render_section(bib, "pub")
+render_section(bib, "pub", taglines)
 ```
 
 ## Selected Work in Progress
@@ -44,5 +45,5 @@ render_section(bib, "pub")
 ```{r}
 #| results: asis
 #| echo: false
-render_section(bib, "wip")
+render_section(bib, "wip", taglines)
 ```

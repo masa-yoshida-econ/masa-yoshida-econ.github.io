@@ -16,6 +16,7 @@ GitHub Actions が render して GitHub Pages に公開する（ワークフロ�
 - `R/statements.R` : Statement ボタン（PDF があればリンク、なければ coming soon）
 - `cv.pdf` : CV（ナビの CV から直接開く。同じ名前で上書き更新）
 - `papers.bib` : 論文リストの正本
+- `taglines.md` : 各論文の一言紹介（Research ページで状況の下に表示。見出しはサイトのタイトルと完全一致させる）
 - `papers/` : 論文・スライド・記事の PDF（Wix から移管済み）
 - `R/render_bib.R` : bib を読んで HTML にする関数（base R のみ）
 - `scripts/strip_generator.sh` : render 後に generator メタタグを削除

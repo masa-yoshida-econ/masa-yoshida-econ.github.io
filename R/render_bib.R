@@ -71,6 +71,26 @@ link_btn <- function(url, label) {
 }
 
 
+# taglines.md: "**N. Title**" line followed by a one-paragraph tagline.
+# Returns a named character vector: names = titles (must match papers.bib exactly).
+read_taglines <- function(path) {
+  if (!file.exists(path)) return(character(0))
+  txt <- paste(readLines(path, warn = FALSE, encoding = "UTF-8"), collapse = "\n")
+  m <- gregexpr("\\*\\*\\d+\\.\\s*(.*?)\\*\\*\\s*\\n+(.*?)(?=\\n\\s*\\n|\\n##|$)", txt, perl = TRUE)
+  hits <- regmatches(txt, m)[[1]]
+  out <- character(0)
+  for (h in hits) {
+    first <- strsplit(h, "\n", fixed = TRUE)[[1]][1]
+    title <- trimws(gsub("^\\*\\*\\d+\\.\\s*|\\*\\*\\s*$", "", first, perl = TRUE))
+    body  <- sub("^\\*\\*[^\\n]*\\*\\*\\s*\\n+", "", h, perl = TRUE)
+    body  <- trimws(gsub("\\s+", " ", body))
+    out[title] <- body
+  }
+  out
+}
+
+html_escape <- function(x) gsub(">", "&gt;", gsub("<", "&lt;", gsub("&", "&amp;", x, fixed = TRUE), fixed = TRUE), fixed = TRUE)
+
 # Clean BibTeX for the Cite button (standard fields only).
 bib_escape <- function(x) gsub("&", "\\&", gsub("\\\\&", "&", x))
 make_bibtex <- function(e) {
@@ -98,7 +118,7 @@ month_name <- function(m) {
   month.name[as.integer(m)]
 }
 
-render_entry <- function(e, me = "Masahiro Yoshida") {
+render_entry <- function(e, me = "Masahiro Yoshida", taglines = character(0)) {
   # --- authors: all names, coauthors linked when author_url is given ---
   authors <- format_authors(e$author)
   aurl <- parse_author_url(e$author_url)
@@ -149,14 +169,16 @@ render_entry <- function(e, me = "Masahiro Yoshida") {
   talks <- if (!is.null(e$talks)) sprintf('<div class="pub-talks">%s</div>', tex2html(e$talks)) else ""
   abs   <- if (!is.null(e$abstract)) sprintf('<details><summary>Abstract</summary><p>%s</p></details>', tex2html(e$abstract)) else ""
 
-  sprintf('<div class="pub" id="%s">\n<div class="pub-title">%s</div>\n%s\n%s\n%s%s%s%s\n</div>\n',
-          e$key, tex2html(e$title), authors_html, meta_html, links_html, cite_html, talks, abs)
+  tl <- if (!is.null(e$title) && e$title %in% names(taglines)) taglines[[e$title]] else NULL
+  tagline_html <- if (!is.null(tl)) sprintf('<div class="pub-tagline">%s</div>\n', html_escape(tl)) else ""
+  sprintf('<div class="pub" id="%s">\n<div class="pub-title">%s</div>\n%s\n%s\n%s%s%s%s%s\n</div>\n',
+          e$key, tex2html(e$title), authors_html, meta_html, tagline_html, links_html, cite_html, talks, abs)
 }
 
-render_section <- function(entries, section) {
+render_section <- function(entries, section, taglines = character(0)) {
   es <- Filter(function(e) identical(e$section, section), entries)
   if (!length(es)) return(invisible(NULL))
   yrs <- vapply(es, function(e) as.integer(if (is.null(e$year)) 0 else e$year), integer(1))
   es <- es[order(-yrs, seq_along(es))]
-  cat(paste(vapply(es, render_entry, character(1)), collapse = "\n"))
+  cat(paste(vapply(es, render_entry, character(1), taglines = taglines), collapse = "\n"))
 }
