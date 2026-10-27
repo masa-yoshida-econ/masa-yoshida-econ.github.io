@@ -81,7 +81,15 @@ h3 { font-size: 1.1rem; margin-top: 1.6rem; }
 .pub-meta .dot { padding: 0 .5rem; color: $muted; }
 .pub-journal { font-style: italic; font-weight: 700; }
 .pub-status-note { font-size: .8em; color: $muted; }
-.pub-tagline { color: $ink; font-size: .98rem; line-height: 1.55; margin: .35rem 0 .1rem 0; max-width: 46rem; }
+.pub-tagline {
+  position: relative; padding-left: 2rem; margin: .55rem 0 .25rem 0;
+  font-family: $font-family-serif; font-style: italic; font-size: .88rem; line-height: 1.5; color: $ink;
+}
+.pub-tagline::before {
+  content: "\201C"; position: absolute; left: 0; top: -.45rem;
+  font-family: Georgia, "Times New Roman", serif; font-style: normal; font-size: 3rem; line-height: 1;
+  color: $waseda-red; opacity: .85;
+}
 .pub-links { margin-top: .4rem; }
 .pub-links a {
   display: inline-block; font-family: $font-family-serif; font-size: .85rem;

@@ -172,7 +172,7 @@ render_entry <- function(e, me = "Masahiro Yoshida", taglines = character(0)) {
   tl <- if (!is.null(e$title) && e$title %in% names(taglines)) taglines[[e$title]] else NULL
   tagline_html <- if (!is.null(tl)) sprintf('<div class="pub-tagline">%s</div>\n', html_escape(tl)) else ""
   sprintf('<div class="pub" id="%s">\n<div class="pub-title">%s</div>\n%s\n%s\n%s%s%s%s%s\n</div>\n',
-          e$key, tex2html(e$title), authors_html, meta_html, tagline_html, links_html, cite_html, talks, abs)
+          e$key, tex2html(e$title), authors_html, meta_html, talks, links_html, cite_html, tagline_html, abs)
 }
 
 render_section <- function(entries, section, taglines = character(0)) {
