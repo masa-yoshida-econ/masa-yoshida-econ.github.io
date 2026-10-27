@@ -16,20 +16,15 @@ taglines <- read_taglines("taglines.md")
 statement_buttons("Yoshida_ResearchStatement", "Research Statement")
 ```
 
-## Under Revision
-
-```{r}
-#| results: asis
-#| echo: false
-render_section(bib, "wp_revision", taglines)
-```
-
 ## Working Papers
 
 ```{r}
 #| results: asis
 #| echo: false
-render_section(bib, "wp", taglines)
+render_section_by_theme(bib, "wp", c(
+  climate     = "Climate Change and the Reallocation of Jobs",
+  immigration = "Immigration, Automation, and AI"
+), taglines)
 ```
 
 ## Journal Publications

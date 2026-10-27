@@ -182,3 +182,16 @@ render_section <- function(entries, section, taglines = character(0)) {
   es <- es[order(-yrs, seq_along(es))]
   cat(paste(vapply(es, render_entry, character(1), taglines = taglines), collapse = "\n"))
 }
+
+# Working Papers grouped by theme. `themes` = named vector: c(key = "Heading", ...)
+render_section_by_theme <- function(entries, section, themes, taglines = character(0)) {
+  for (k in names(themes)) {
+    es <- Filter(function(e) identical(e$section, section) && identical(e$theme, k), entries)
+    if (!length(es)) next
+    cat(sprintf('<h3 class="pub-theme">%s</h3>\n', themes[[k]]))
+    render_section(es, section, taglines)
+    cat("\n")
+  }
+  rest <- Filter(function(e) identical(e$section, section) && !(e$theme %in% names(themes)), entries)
+  if (length(rest)) render_section(rest, section, taglines)
+}
