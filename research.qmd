@@ -32,7 +32,9 @@ render_section_by_theme(bib, "wp", c(
 ```{r}
 #| results: asis
 #| echo: false
-render_section(bib, "pub", taglines)
+render_section_by_theme(bib, "pub", c(
+  bargaining = "Earlier Work on Bargaining Theory"
+), taglines)
 ```
 
 ## Selected Work in Progress
