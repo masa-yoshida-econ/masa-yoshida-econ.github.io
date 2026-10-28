@@ -34,7 +34,7 @@ Can buyers turn deadlines against a monopolist? A “soft” deadline—imperfec
 
 **8. Deadline Credibility and Trade Efficiency**
 
-Do all deadlines in one-on-one market transactions need to be perfectly credible? Theory and laboratory evidence show that an imperfectly credible earlier deadline can induce earlier concessions and improve trade efficiency.
+Do all deadlines in one-on-one market transactions need to be perfectly credible? Theory and laboratory evidence show that an imperfectly credible interim deadline can induce earlier concessions and improve trade efficiency.
 
 ## Work in Progress
 
