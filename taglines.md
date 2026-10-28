@@ -44,4 +44,4 @@ The costs of extreme heat may persist long after a hot day ends. We study whethe
 
 **10. Too Hot to Marry? Rising Temperature and Declining Marriage among Millennials**
 
-Millennials are the first generation to come of age in the new century, experiencing the most severe warming during their formative years. We study whether rising temperatures reduce marriage among less-educated young men by weakening their prospects for stable outdoor employment.
+Millennials are the first generation to come of age in the new century, experiencing the most severe warming during their formative years. I study whether rising temperatures reduce marriage among less-educated young men by weakening their prospects for stable outdoor employment.
