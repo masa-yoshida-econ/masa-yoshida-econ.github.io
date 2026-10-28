@@ -23,7 +23,7 @@ statement_buttons("Yoshida_ResearchStatement", "Research Statement")
 #| echo: false
 render_section_by_theme(bib, "wp", c(
   climate     = "Climate Change and the Reallocation of Jobs",
-  immigration = "Immigration, Automation, and AI under Population Aging"
+  immigration = "Man vs. Machine in an Aging Economy"
 ), taglines)
 ```
 

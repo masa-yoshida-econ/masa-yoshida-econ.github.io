@@ -33,7 +33,7 @@ Welcome to my website! I am an Associate Professor at the Faculty of Political S
 <dt>Fields</dt>
 <dd>Applied econometrics, labor economics, environmental economics, and macroeconomics</dd>
 <dt>Interests</dt>
-<dd>Climate change and the reallocation of work, automation, immigration and aging</dd>
+<dd>Climate change and the reallocation of jobs; man vs. machine in an aging economy</dd>
 <dt>Methods</dt>
 <dd>Applied econometrics, structural modeling, and experiments</dd>
 </dl>

@@ -12,7 +12,7 @@ We provide a novel hypothesis for the puzzle of the U.S. labor share decline sin
 
 We show that climate exposure materially shapes monthly U.S. unemployment, but conventional seasonal adjustment masks the impact of climate change—even in the headline indicator guiding Federal Reserve policymaking and congressional debate.
 
-## Immigration, Automation, and AI under Population Aging
+## Man vs. Machine in an Aging Economy
 
 **4. Immigration, Automation and the U.S. Cities: A Task-based Framework for Welfare Analysis**
 
