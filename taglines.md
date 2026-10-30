@@ -38,7 +38,7 @@ Do all deadlines in one-on-one market transactions need to be perfectly credible
 
 ## Work in Progress
 
-**9. Climate Change and the Growth of Disability Rolls: Evidence from the US Counties**
+**9. Climate Change and the Growth of Disability Rolls: Evidence from U.S. Counties**
 
 The costs of extreme heat may persist long after a hot day ends. We study whether heat exposure raises disability insurance applications and awards, a lasting burden on social insurance.
 
