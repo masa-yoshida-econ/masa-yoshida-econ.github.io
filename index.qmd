@@ -18,7 +18,7 @@ Welcome to my website! I am an Associate Professor at the Faculty of Political S
 
 <ul class="contact-list">
 <li><i class="bi bi-envelope"></i> m.yoshida [at] waseda.jp</li>
-<li><i class="bi bi-file-earmark-pdf"></i> <a href="cv.pdf">Curriculum Vitae</a> (PDF, October 21, 2026)</li>
+<li><i class="bi bi-file-earmark-pdf"></i> <a href="cv.pdf">Curriculum Vitae</a> (PDF, October 30, 2026)</li>
 <li><i class="bi bi-linkedin"></i> <a href="https://www.linkedin.com/in/masahiro-yoshida-8481928a/">LinkedIn</a></li>
 </ul>
 :::
