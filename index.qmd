@@ -51,7 +51,16 @@ Welcome to my website! I am an Associate Professor at the Faculty of Political S
 
 :::
 
-<p class="home-note">Dear workshop organizers: I'm happy to present my recent works. Please feel free to contact me.</p>
+## Selected Works
+
+```{r}
+#| results: asis
+#| echo: false
+source("R/render_bib.R")
+render_selected(read_bib("papers.bib"),
+                c("yoshida_toohot", "yoshida_qiu_laborshare"),
+                read_taglines("taglines.md"))
+```
 
 ## Recent Talks
 

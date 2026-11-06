@@ -118,7 +118,7 @@ month_name <- function(m) {
   month.name[as.integer(m)]
 }
 
-render_entry <- function(e, me = "Masahiro Yoshida", taglines = character(0)) {
+render_entry <- function(e, me = "Masahiro Yoshida", taglines = character(0), show_talks = TRUE) {
   # --- authors: all names, coauthors linked when author_url is given ---
   authors <- format_authors(e$author)
   aurl <- parse_author_url(e$author_url)
@@ -166,7 +166,7 @@ render_entry <- function(e, me = "Masahiro Yoshida", taglines = character(0)) {
   links_html <- if (length(links)) sprintf('<div class="pub-links">%s</div>', paste(links, collapse = "")) else ""
   cite_html <- if (!show_cite) "" else sprintf('<div class="pub-cite" id="%s" hidden><pre><code>%s</code></pre><button type="button" class="pub-cite-copy">Copy</button></div>',
                        cite_id, gsub("<", "&lt;", make_bibtex(e), fixed = TRUE))
-  talks <- if (!is.null(e$talks)) sprintf('<div class="pub-talks">%s</div>', tex2html(e$talks)) else ""
+  talks <- if (show_talks && !is.null(e$talks)) sprintf('<div class="pub-talks">%s</div>', tex2html(e$talks)) else ""
   abs   <- if (!is.null(e$abstract)) sprintf('<details><summary>Abstract</summary><p>%s</p></details>', tex2html(e$abstract)) else ""
 
   tl <- if (!is.null(e$title) && e$title %in% names(taglines)) taglines[[e$title]] else NULL
@@ -181,6 +181,12 @@ render_section <- function(entries, section, taglines = character(0)) {
   yrs <- vapply(es, function(e) as.integer(if (is.null(e$year)) 0 else e$year), integer(1))
   es <- es[order(-yrs, seq_along(es))]
   cat(paste(vapply(es, render_entry, character(1), taglines = taglines), collapse = "\n"))
+}
+
+# Home page highlights: entries by bib key, in the given order, without talks.
+render_selected <- function(entries, keys, taglines = character(0)) {
+  es <- lapply(keys, function(k) Filter(function(e) identical(e$key, k), entries)[[1]])
+  cat(paste(vapply(es, render_entry, character(1), taglines = taglines, show_talks = FALSE), collapse = "\n"))
 }
 
 # Working Papers grouped by theme. `themes` = named vector: c(key = "Heading", ...)
