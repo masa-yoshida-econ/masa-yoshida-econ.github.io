@@ -61,9 +61,3 @@ render_selected(read_bib("papers.bib"),
                 c("yoshida_toohot", "yoshida_qiu_laborshare"),
                 read_taglines("taglines.md"))
 ```
-
-## Recent Talks
-
-::: {.talks}
-{{< include talks.md >}}
-:::

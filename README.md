@@ -7,8 +7,8 @@ GitHub Actions が render して GitHub Pages に公開する（ワークフロ�
 
 - `_quarto.yml` : サイト設定（ナビ・テーマ・フォント）
 - `styles.scss` : 配色・余白・ナビバーの上書き
-- `index.qmd` : Home（`talks.md` を include して Recent Talks を表示）
-- `talks.md` : Recent Talks の正本。1 行 1 件、新しい順に書く
+- `index.qmd` : Home（Selected Works は `papers.bib` から key で 2 本を描画）
+- `talks.md` : 発表の控え。2026-11-08 から Home には出していない
 - `research.qmd` : Research（`papers.bib` を読んで自動描画）
 - `writing.qmd`, `writing.md` : Non-Technical Writing（本と一般向け記事。`writing.md` が正本）
 - `teaching.qmd` : Teaching（授業歴は qmd に直接書く）
@@ -26,7 +26,7 @@ GitHub Actions が render して GitHub Pages に公開する（ワークフロ�
 
 ## 日常更新
 
-- 発表を追加: `talks.md` の先頭に 1 行足す → push。
+- 発表を追加: 論文の bib の `talks` 欄に足す → push（`talks.md` は控え）。
 - 本・一般向け記事を追加: `writing.md` の該当セクション先頭に足す → push。
 - Statement を公開: 次の名前で `statements/` に PDF を置く → push。
   `Yoshida_ResearchStatement_EN.pdf` / `Yoshida_ResearchStatement_JA.pdf` /
