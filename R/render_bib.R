@@ -103,7 +103,7 @@ make_bibtex <- function(e) {
   f <- Filter(Negate(is.null), f)
   if (!is.null(e$month)) f$month <- month.abb[as.integer(e$month)]
   if (!is_pub) {
-    note <- c(if (!is.null(e$status)) paste(e$status, if (!is.null(e$journal)) paste("at", e$journal)),
+    note <- c(if (!is.null(e$status)) paste(e$status, if (!is.null(e$journal)) paste(if (grepl("^Forthcoming", e$status)) "in" else "at", e$journal)),
               if (is.null(e$status)) "Working paper")
     f$note <- note[1]
   }
@@ -138,7 +138,8 @@ render_entry <- function(e, me = "Masahiro Yoshida", taglines = character(0), sh
   if (!is.null(status) && !is.null(e$status_note))
     status <- paste0(status, ' <span class="pub-status-note">(', tex2html(e$status_note), ')</span>')
   venue <- if (!is.null(status) && !is.null(journal)) {
-    sprintf('<span class="pub-status">%s at %s</span>', status, journal)
+    prep <- if (grepl("^Forthcoming", status)) "in" else "at"   # "Forthcoming in <journal>"
+    sprintf('<span class="pub-status">%s %s %s</span>', status, prep, journal)
   } else if (!is.null(status)) {
     sprintf('<span class="pub-status">%s</span>', status)
   } else journal
